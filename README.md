@@ -58,10 +58,10 @@ This process emulates human cognitive function of associative memory retrieval, 
 - **MDP Formulation**:
   - Defines business problem as a Markov Decision Process
   - Components:
-    - State: Detailed business metrics
-    - Actions: Potential strategies
-    - Transitions: Specific state change examples
-    - Rewards: Concrete financial/operational metrics
+    - *State*: Detailed business metrics
+    - Actions*: Potential strategies
+    - *Transitions: Specific state change examples
+    - *Rewards*: Concrete financial/operational metrics
   - Establishes foundation for Q-value estimation and policy improvement
 
 This structured approach mirrors the human cognitive process of problem framing and initial strategy formulation. By explicitly defining the problem in MDP terms, it encourages systematic thinking about the current state, possible actions, and potential outcomes, surpassing the capabilities of traditional prompting methods in complex business scenario analysis.
