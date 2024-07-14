@@ -78,15 +78,46 @@ cp .env.example .env
 
 ```mermaid
 graph TD
-    A[User Input] --> B[Multi-Model Orchestrator]
-    B --> C[Gemini 1.5 Pro]
-    B --> D[Claude-3-sonnet]
-    B --> E[GPT Embedding Model]
-    F[Vector Database] --> B
-    B --> G[Strategy Formulator]
-    G --> H[Implementation Planner]
-    H --> I[Critique and Refinement]
-    I --> J[Final Reports]
+    A[User Input] --> B[Input Processor]
+    B --> C[Vector Embedding Generator]
+    C --> D[Vector Database Query]
+    D --> E[Knowledge Synthesizer]
+    B --> F[MDP State Initializer]
+    F --> G[Multi-Model Orchestrator]
+    E --> G
+    G --> H[Gemini 1.5 Pro]
+    G --> I[Claude-3-sonnet]
+    G --> J[GPT Embedding Model]
+    H & I & J --> K[Q-Value Approximator]
+    K --> L[Policy Improvement Simulator]
+    L --> M[Value Function Optimizer]
+    M --> N[Strategy Formulator]
+    N --> O[Implementation Planner]
+    O --> P[Critique and Refinement Module]
+    P --> Q{Convergence Check}
+    Q -->|No| G
+    Q -->|Yes| R[Final Report Generator]
+    R --> S[Business Strategy Report]
+    R --> T[Implementation Roadmap]
+
+    subgraph "Vector Database"
+        V1[Business Domain Vectors]
+        V2[Historical Case Vectors]
+        V3[Market Trend Vectors]
+    end
+
+    D -.-> V1 & V2 & V3
+
+    subgraph "Prompt Templates"
+        PT1[State Representation]
+        PT2[Action Space Definition]
+        PT3[Q-Value Estimation]
+        PT4[Policy Improvement]
+        PT5[Value Optimization]
+    end
+
+    G -.-> PT1 & PT2 & PT3 & PT4 & PT5
+
 ```
 
 </div>
