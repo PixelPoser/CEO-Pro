@@ -44,11 +44,11 @@ Transform your business strategy with our AI-driven Consulting Model. To get sta
 
 Our model analyzes your data to offer precise, actionable recommendations, helping you overcome challenges and seize growth opportunities. Enter your details and start optimizing your business today!
 
-### 🫡 How It Works 
+## 🫡 How It Works 
 
 This project implements a sophisticated business strategy optimization system inspired by advanced AI reasoning techniques. Here's a breakdown of the process:
 
-## 1. Query Processing and Vector Search
+### 1. Query Processing and Vector Search
 
 - **Query Embedding**: 
   - Uses OpenAI's text-embedding-3-large model
