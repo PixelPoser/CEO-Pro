@@ -21,7 +21,9 @@ Your CEO AI assistant is finally here!
 
 By popular request:
 https://futurism.com/the-byte/ceos-easily-replaced-with-ai
+
 https://www.nytimes.com/2024/05/28/technology/ai-chief-executives.html
+
 https://www.forbes.com/sites/sherzododilov/2024/01/11/can-ai-become-your-next-ceo/
 
 CEO-Pro represents a leap in AI-assisted business consulting, offering unparalleled reasoning improvements and strategic depth and breadth of knowledge compared to traditional prompting strategies with foundation models.
