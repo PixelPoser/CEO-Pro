@@ -103,12 +103,6 @@ The system generates two key documents:
 1. **Comprehensive Business Plan** (`Final_Business_Report.md`)
 2. **Detailed Implementation Plan** (`Final_Implementation_Plan.md`)
 
-## Paper
-
-Read the paper!
-
-[CEO_PRO.pdf](https://github.com/user-attachments/files/16228608/CEO_PRO.pdf)
-
 
 ## 🤝 Contributing
 
