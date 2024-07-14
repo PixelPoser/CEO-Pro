@@ -152,9 +152,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Google for Gemini 1.5 Pro
 - Anthropic for Claude-3-sonnet
 
-## 📚 Further Reading
-
-Dive deeper into our methodology in our [arXiv paper](https://arxiv.org/abs/your-paper-id).
 
 ## 🔗 Related Projects
 
