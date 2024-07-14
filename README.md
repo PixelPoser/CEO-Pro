@@ -1,4 +1,4 @@
-### 🚀 CEO-PRO
+## 🚀 CEO-PRO
 
 <div align="center">
 
