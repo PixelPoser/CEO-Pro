@@ -8,8 +8,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/python-3.8%2B-brightgreen.svg)](https://www.python.org/downloads/)
 
-*Advanced Multi-Model Business Strategy Optimizer 
-Revolutionizing business strategy with cutting-edge AI*
+*Advanced Multi-Model Business Strategy Optimizer - Revolutionizing business strategy with cutting-edge AI*
 
 [Features](#-key-features) • [Installation](#-installation) • [Usage](#-usage) • [Architecture](#-system-architecture) • [Contributing](#-contributing) • [License](#-license)
 
