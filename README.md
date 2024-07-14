@@ -17,7 +17,7 @@
 
 ### 🌟 Project Overview
 
-The Advanced Multi-Model Business Strategy Optimizer is a new AI system that harnesses the power of Markov Decision Processes (MDPs), multiple large language models (LLMs) and a comprehensive vector database to generate, evaluate, and refine complex business strategies. 
+The Advanced Multi-Model Business Strategy Optimizer is a new AI system that harnesses the power of Markov Decision Processes (MDPs), multiple large language models (LLMs) and a comprehensive vector database to utilize a high-powered business consultant with greatly improved reasoning ability compared to a traditional approach of conversationally querying foundation models.
 
 This project represents a leap in AI-assisted business consulting, offering unparalleled reasoning improvements and strategic depth compared to prompting with foundation models.
 
