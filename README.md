@@ -1,4 +1,4 @@
-# 🚀 CEO-PRO
+### 🚀 CEO-PRO
 
 <div align="center">
 
@@ -15,7 +15,7 @@
 
 </div>
 
-## 🌟 Project Overview
+### 🌟 Project Overview
 
 The Advanced Multi-Model Business Strategy Optimizer is a new AI system that harnesses the power of Markov Decision Processes (MDPs), multiple large language models (LLMs) and a comprehensive vector database to generate, evaluate, and refine complex business strategies. 
 
@@ -41,7 +41,7 @@ This project implements a sophisticated business strategy optimization system in
 
 - **Query Embedding**: 
   - Uses OpenAI's text-embedding-3-large model
-  - Creates 1536-dimensional vector representation
+  - Creates 3072-dimensional vector representation
   - Aligns with high-dimensional state representation in multi-step reasoning
 
 - **Vector Database Search**:
