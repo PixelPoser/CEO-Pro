@@ -33,7 +33,7 @@ Transform your business strategy with our AI-driven Consulting Model. To get sta
 
 Our model analyzes your data to offer precise, actionable recommendations, helping you overcome challenges and seize growth opportunities. Enter your details and start optimizing your business today!
 
-### How It Works 🫡
+### 🫡 How It Works 
 
 This project implements a sophisticated business strategy optimization system inspired by advanced AI reasoning techniques. Here's a breakdown of the process:
 
@@ -51,7 +51,7 @@ This project implements a sophisticated business strategy optimization system in
 
 This process emulates human cognitive function of associative memory retrieval, rapidly accessing contextually relevant information. The vector search methodology provides a computationally efficient way to simulate this process, offering richer contextual information compared to traditional prompting techniques used with large language models.
 
-## 2. Initial State and Action Space Definition
+### 2. Initial State and Action Space Definition
 
 - **MDP Formulation**:
   - Defines business problem as a Markov Decision Process
@@ -64,7 +64,7 @@ This process emulates human cognitive function of associative memory retrieval, 
 
 This structured approach mirrors the human cognitive process of problem framing and initial strategy formulation. By explicitly defining the problem in MDP terms, it encourages systematic thinking about the current state, possible actions, and potential outcomes, surpassing the capabilities of traditional prompting methods in complex business scenario analysis.
 
-## 3. Q-value Estimation and Simulation
+### 3. Q-value Estimation and Simulation
 
 - **Offline Reinforcement Learning**:
   - Analyzes 10 historical business situations
@@ -80,7 +80,7 @@ This structured approach mirrors the human cognitive process of problem framing 
 
 This process simulates the human cognitive functions of learning from past experiences and mental simulation of potential outcomes. By incorporating techniques like MCTS, it goes beyond simple pattern matching to explore different decision paths and their consequences, providing a more sophisticated analysis than traditional prompting methods.
 
-## 4. Evaluation Process and Strategy Refinement
+### 4. Evaluation Process and Strategy Refinement
 
 - **Iterative Strategy Evaluation**:
   - 10 rounds per strategy area
@@ -96,7 +96,7 @@ This process simulates the human cognitive functions of learning from past exper
 
 This iterative refinement process mirrors how humans improve their ideas through repeated analysis and critique. The multiple rounds of evaluation emulate the natural process of refining thoughts over time, allowing for the evolution and improvement of strategies rather than settling for initial ideas.
 
-## 5. Strategy Analysis and Adversarial Critique
+### 5. Strategy Analysis and Adversarial Critique
 
 - **Comprehensive Strategy Evaluation**:
   - Evaluates strategies using real historical data and advanced reasoning
@@ -108,7 +108,7 @@ This iterative refinement process mirrors how humans improve their ideas through
 
 This step emulates the human process of critical thinking and playing devil's advocate. By actively seeking out flaws in the proposed strategies, it mimics how experienced professionals scrutinize their own ideas. This adversarial approach actively works to identify and address potential weaknesses in the strategies, surpassing the capabilities of traditional prompting methods.
 
-## 6. Implementation Roadmap and Conclusion
+### 6. Implementation Roadmap and Conclusion
 
 - **Detailed Implementation Plan**:
   - Develops step-by-step plan including:
