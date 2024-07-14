@@ -38,7 +38,7 @@ $$V(s) \approx \mathbb{E}_\pi[R(s, a) + \gamma V(s')]$$
 ## 🔑 Key Features
 
 - 🤖 **Multi-Model AI Ensemble**: Synergistic use of Gemini, Claude, and GPT
-- 🔍 **High-Dimensional Vector Database**: 1536-dimensional space for nuanced knowledge representation
+- 🔍 **High-Dimensional Vector Database**: 3072-dimensional space for nuanced knowledge representation
 - 🧮 **Advanced Prompt Engineering**: Simulating value-based learning with LLMs
 - 📊 **Dynamic Strategy Formulation**: Iterative optimization and refinement
 - ⚡ **Computational Efficiency**: Reduced complexity from $O(|S|^2 |A|)$ to $O(k \cdot m)$
