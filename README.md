@@ -2,7 +2,8 @@
 
 <div align="center">
 
-![Project Logo]([https://github.com/user-attachments/assets/11b5dbe6-3733-4046-8c0b-b74fd9776474](https://github.com/user-attachments/assets/e3cf7b2b-8b60-46dd-b34d-188bde18f389))
+![Project Logo](https://github.com/user-attachments/assets/5c8bee2c-0325-48fa-a3ba-38523ddcbfa0)
+
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://semver.org)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
