@@ -32,6 +32,8 @@ index = pc.Index(INDEX_NAME)
 
 # Hardcoded query option (set to None if you want to use user input)
 HARDCODED_QUERY = """
+SAMPLE SAMPE SAMPLE:
+
 ### GlobalTech Inc.: Escalating Challenges Requiring Strong Leadership
 
 #### Company Overview
