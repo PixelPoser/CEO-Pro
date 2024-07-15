@@ -228,9 +228,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgements
 
-- OpenAI for GPT models
+- OpenAI for Text-Embedding-3-Large
 - Google for Gemini 1.5 Pro
-- Anthropic for Claude-3-sonnet
+- Anthropic for Claude-3.5-Sonnet
 
 
 
