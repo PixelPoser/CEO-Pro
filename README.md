@@ -26,7 +26,7 @@ https://www.nytimes.com/2024/05/28/technology/ai-chief-executives.html
 
 https://www.forbes.com/sites/sherzododilov/2024/01/11/can-ai-become-your-next-ceo/
 
-CEO-Pro represents a leap in AI-assisted business consulting, offering unparalleled reasoning improvements and strategic depth and breadth of knowledge compared to traditional prompting strategies with foundation models.
+CEO-Pro represents a leap in AI-assisted business consulting, offering strong reasoning improvements and strategic depth and breadth of knowledge compared to traditional prompting strategies with foundation models.
 
 CEO-Pro’s secret lies in harnessing the power of Markov Decision Processes (MDPs), Q-value Estimation, and Monte Carlo decision trees. It utilizes organized rounds of adversarial critique and iterative improvement from a ‘panel of experts,’ along with a rich, high-dimensional vector database of vetted business knowledge with a large context length. 
 
