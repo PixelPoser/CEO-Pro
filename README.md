@@ -89,7 +89,7 @@ This structured approach mirrors the human cognitive process of problem framing 
   - Evaluates action sequences based on KPIs
   - Explores decision paths in complex reasoning tasks
 
-This process simulates the human cognitive functions of learning from past experiences and mental simulation of potential outcomes. By incorporating techniques like MCTS, it goes beyond simple pattern matching to explore different decision paths and their consequences, providing a more sophisticated analysis than traditional prompting methods.
+This process simulates the human cognitive functions of learning from past experiences and mental simulation of potential outcomes. By incorporating techniques like simulated MCTS via prompt engineering, it goes beyond simple pattern matching to explore different decision paths and their consequences, providing a more sophisticated analysis than traditional prompting methods.
 
 ### 4. Evaluation Process and Strategy Refinement
 
