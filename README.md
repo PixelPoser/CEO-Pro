@@ -190,7 +190,11 @@ cp .env.example .env
 ## 🖥 Usage
 
 1. Open `business_consulting_chatbot.py`
-2. Modify the `HARDCODED_QUERY` variable:
+2. Input your required API keys
+  - Anthropic
+  - OpenAI
+  - Google Gemini
+3. Modify the `HARDCODED_QUERY` variable:
    ```python
    HARDCODED_QUERY = """
    [Your detailed business scenario here]
