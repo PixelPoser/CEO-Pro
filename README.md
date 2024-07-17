@@ -45,11 +45,13 @@ Transform your business strategy with our AI-driven Consulting Model. To get sta
 CEO-Pro is also multi-modal thanks to the Gemini 1.5 Pro API, and with the new 2 million token context, you can provide sizeable amounts of relevant and contextual data in the form of:
 
 - **Documents:** PDF, DOCX, TXT (up to 20MB per file).
-- **Images:** PNG, JPEG, WEBP, HEIC, HEIF (up to 7MB per image, max 3,600 images).
+- **Images:** PNG, JPEG, WEBP, HEIC, HEIF (up to 7MB per image, max 3,000 images).
 - **Audio:** WAV, MP3, AIFF, AAC, OGG, FLAC (up to 9.5 hours total length).
-- **Video:** MP4, MPEG, MOV, AVI, FLV, MPG, WEBM, WMV, 3GPP (up to 60 minutes for frames only, ~45 minutes with audio).
+- **Video:** MP4, MPEG, MOV, AVI, FLV, MPG, WEBM, WMV, 3GPP (up to 40 minutes for frames only, ~30 minutes with audio).
 - **Spreadsheets:** CSV, XLSX (parsed as text, subject to token limits).
 - **Code:** Various programming languages supported as plain text.
+
+Stated limits above are adjusted to provide room for conversation tokens.
 
 **Key Capabilities:**
 
