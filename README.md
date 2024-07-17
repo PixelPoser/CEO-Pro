@@ -42,7 +42,7 @@ Transform your business strategy with our AI-driven Consulting Model. To get sta
 - **Industry:** Your specific business sector for context-relevant insights.
 - **Issue:** The strategic question or challenge you need resolved.
 
-CEO-Pro is also multi-modal thanks to the Gemini 1.5 Pro API, and with the new 2 million token context, you can provide sizeable amounts of relevant and contextual data in the form of:
+Upcoming update will make CEO-Pro is also multi-modal thanks to the Gemini 1.5 Pro API, and with the new 2 million token context, you can provide sizeable amounts of relevant and contextual data in the form of:
 
 - **Documents:** PDF, DOCX, TXT (up to 20MB per file).
 - **Images:** PNG, JPEG, WEBP, HEIC, HEIF (up to 7MB per image, max 3,000 images).
