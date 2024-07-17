@@ -42,7 +42,24 @@ Transform your business strategy with our AI-driven Consulting Model. To get sta
 - **Industry:** Your specific business sector for context-relevant insights.
 - **Issue:** The strategic question or challenge you need resolved.
 
-Our model analyzes your data to offer precise, actionable recommendations, helping you overcome challenges and seize growth opportunities. Enter your details and start optimizing your business today!
+CEO-Pro is also multi-modal thanks to the Gemini 1.5 Pro API, and with the new 2 million token context, you can provide sizeable amounts of relevant and contextual data in the form of:
+
+- **Documents:** PDF, DOCX, TXT (up to 20MB per file).
+- **Images:** PNG, JPEG, WEBP, HEIC, HEIF (up to 7MB per image, max 3,600 images).
+- **Audio:** WAV, MP3, AIFF, AAC, OGG, FLAC (up to 9.5 hours total length).
+- **Video:** MP4, MPEG, MOV, AVI, FLV, MPG, WEBM, WMV, 3GPP (up to 60 minutes for frames only, ~45 minutes with audio).
+- **Spreadsheets:** CSV, XLSX (parsed as text, subject to token limits).
+- **Code:** Various programming languages supported as plain text.
+
+**Key Capabilities:**
+
+- **Token Limit:** Up to 1 million tokens combined input and output.
+- **Output Limit:** 8,192 tokens per response.
+- **Multi-turn Conversations:** Engage in complex, context-aware dialogues.
+- **Cross-file Analysis:** Seamlessly analyze and correlate data from multiple file types.
+- **Language Support:** Over 30 languages for truly global insights.
+
+CEO-Pro analyzes your data to offer precise, actionable recommendations, helping you overcome challenges and seize growth opportunities. Enter your details and start optimizing your business today!
 
 ## 🫡 How It Works 
 
