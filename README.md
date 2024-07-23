@@ -185,7 +185,6 @@ $$V(s) \approx \mathbb{E}_\pi[R(s, a) + \gamma V(s')]$$
 
 ## 🔑 Key Features
 
-- 🤖 **Multi-Model AI Ensemble**: Synergistic use of Gemini, Claude, and GPT
 - 🔍 **High-Dimensional Vector Database**: 3072-dimensional space for nuanced knowledge representation
 - 🧮 **Advanced Prompt Engineering**: Simulating value-based learning with LLMs
 - 📊 **Dynamic Strategy Formulation**: Iterative optimization and refinement
@@ -210,7 +209,6 @@ cp .env.example .env
 
 1. Open `business_consulting_chatbot.py`
 2. Input your required API keys
-  - Anthropic
   - OpenAI
   - Google Gemini
 3. Modify the `HARDCODED_QUERY` variable:
@@ -253,7 +251,6 @@ This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENS
 
 - OpenAI for Text-Embedding-3-Large
 - Google for Gemini 1.5 Pro
-- Anthropic for Claude-3.5-Sonnet
 
 
 
@@ -262,7 +259,5 @@ This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENS
 <div align="center">
 
 📈 Empowering businesses with AI-driven strategies 🌍
-
-[Top](#-advanced-multi-model-business-strategy-optimizer)
 
 </div>
