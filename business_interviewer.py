@@ -10,7 +10,7 @@ class BusinessInterviewer:
         self.business_info: Dict[str, Any] = {}
 
     def conduct_interview(self) -> str:
-        print("Welcome to the AI Business Consultant!")
+        print("Welcome to CEO-Pro!")
         print("I'm here to gather information about your business and help provide valuable insights.")
         print("Would you like to provide a detailed query upfront or go through a guided interview process?")
         choice = input("Enter 'query' for upfront query or 'interview' for guided process: ").lower()
