@@ -4,21 +4,21 @@ from pinecone import Pinecone
 import logging
 from prompts import *
 from openai import OpenAI
+from pdf_conversion import convert_to_pdf
 import json
 from datetime import datetime
+from business_interviewer import BusinessInterviewer  # New import
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Set up API keys
 GOOGLE_API_KEY = ""
-ANTHROPIC_API_KEY = ""
-PINECONE_API_KEY = "928752cc-c4b5-4d90-98f0-79227c7e37cc"
+PINECONE_API_KEY = ""
 OPENAI_API_KEY = ""
 
 # Initialize clients
 genai.configure(api_key=GOOGLE_API_KEY)
-anthropic_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
 # Initialize Pinecone
@@ -30,64 +30,75 @@ NAMESPACE = "pinecone"
 index = pc.Index(INDEX_NAME)
 
 # Hardcoded query option (set to None if you want to use user input)
-HARDCODED_QUERY = """
-SAMPLE SAMPE SAMPLE:
+HARDCODED_QUERY = """ ### Business Scenario: Financial Crisis and Operational Overhaul for Industrial Solutions Inc.
 
-### GlobalTech Inc.: Escalating Challenges Requiring Strong Leadership
+**Company Overview:**
 
-#### Company Overview
-GlobalTech Inc. is a prominent multinational technology company excelling in consumer electronics and enterprise solutions. The company has seen significant growth by expanding into emerging markets driven by increased consumer demand and rapid digitalization. However, GlobalTech now faces an array of escalating and multifaceted challenges requiring immediate and strong leadership.
+**Name:** Industrial Solutions Inc.  
+**Industry:** Manufacturing  
+**Location:** Midwest, USA  
+**Founded:** 1985  
+**Revenue:** $1.2 billion annually  
+**Employees:** 4,500  
+**Product Lines:** Heavy machinery for construction, agricultural equipment, and industrial tools  
+**Market Share:** 10% in heavy machinery, 8% in agricultural equipment, 5% in industrial tools  
+**Competitors:** Global Manufacturing Corp, Tech Tools Ltd., Agritech Solutions  
 
-#### Specific Problems and Strategic Complications
+**Financial Situation:**
 
-1. **Environmental and Regulatory Scrutiny**:
-   - **Problem**: The European Union has implemented a new regulation requiring a 50% reduction in carbon emissions for all manufacturing processes within the next two years. Non-compliance could result in fines up to €500 million and a potential ban on selling products in EU markets.
-     - **Variable 1**: Key manufacturing partners are already operating at maximum capacity, making rapid changes difficult without significant downtime.
-     - **Variable 2**: Competitors have been secretly lobbying for even stricter regulations, aiming to cripple GlobalTech's operations.
-     - **Variable 3**: The company's largest European factory is located in a region currently experiencing political instability, further complicating compliance efforts.
-     - **Variable 4**: Local environmental groups have threatened to initiate protests and legal actions against GlobalTech, potentially causing disruptions at manufacturing sites.
+**Revenue:** $1.2 billion (down from $1.5 billion in the previous fiscal year)  
+**Net Income:** -$50 million (loss)  
+**Operating Margin:** -4.2%  
+**Debt:** $400 million  
+**Cash Reserves:** $50 million  
+**Current Ratio:** 0.85 (indicating liquidity issues)  
+**Stock Price:** $18 per share (down from $30 per share a year ago)
 
-2. **Technological Advancements and Ethical Concerns**:
-   - **Problem**: A major data breach occurred, exposing sensitive customer data and leading to a class-action lawsuit. This has raised ethical concerns regarding data privacy and security practices.
-     - **Variable 1**: The breach involved high-profile customers, increasing the risk of significant media coverage and public outrage.
-     - **Variable 2**: Internal investigations suggest that the breach may have been an inside job, leading to mistrust among employees and potential further security vulnerabilities.
-     - **Variable 3**: The breach has led to an ongoing federal investigation, with the potential for severe legal repercussions and additional fines.
-     - **Variable 4**: Several key clients have threatened to terminate contracts, citing loss of trust and security concerns.
+### Scenario: Severe Financial Crisis and Operational Inefficiencies
 
-3. **Investor and Employee Pressures**:
-   - **Problem**: Investors have threatened to withdraw funding due to the perceived negative impact of sustainability initiatives on short-term profitability. Concurrently, employees have organized a walkout demanding greater transparency and involvement in decision-making processes.
-     - **Variable 1**: The potential withdrawal of funding comes at a critical time when the company is negotiating a major acquisition.
-     - **Variable 2**: The employee walkout is planned to coincide with a major product launch, threatening to disrupt operations and damage the launch's success.
-     - **Variable 3**: A group of influential investors has started a campaign to replace the current CEO, citing poor management of the sustainability strategy.
-     - **Variable 4**: Several top engineers have resigned in protest, causing delays in key R&D projects and creating talent shortages.
+**Problem Statement:**
 
-4. **Customer Demands and Competitive Threats**:
-   - **Problem**: A major competitor has launched a product line made entirely from recycled materials, capturing significant market share and positioning itself as the leader in eco-friendly technology.
-     - **Variable 1**: The competitor's product is also significantly cheaper, appealing to cost-sensitive customers and eroding GlobalTech's market share further.
-     - **Variable 2**: The competitor has initiated an aggressive marketing campaign that highlights GlobalTech's perceived environmental shortcomings.
-     - **Variable 3**: Customer feedback indicates a growing preference for the competitor's products, with a notable drop in GlobalTech's customer satisfaction ratings.
-     - **Variable 4**: Key retailers have begun to prioritize shelf space for the competitor's products, reducing visibility and availability of GlobalTech's offerings.
+Industrial Solutions Inc. is at a critical juncture, facing two primary challenges that threaten its survival: a severe financial crisis and significant operational inefficiencies.
 
-5. **Economic Climate and Inflation**:
-   - **Problem**: High inflation has increased the cost of raw materials by 20%, leading to higher production costs and reduced profit margins.
-     - **Variable 1**: Key suppliers are facing financial difficulties, leading to supply chain disruptions and potential shortages of essential materials.
-     - **Variable 2**: Inflation is also affecting consumer spending power, reducing overall demand for premium products.
-     - **Variable 3**: A recent surge in energy prices has further exacerbated operational costs, impacting the bottom line.
-     - **Variable 4**: GlobalTech's debt obligations have become more burdensome with rising interest rates, putting additional financial strain on the company.
+### Core Issues:
 
-6. **Regulatory Compliance**:
-   - **Problem**: New regulations in North America mandate that 75% of all components used in manufacturing must be sourced domestically to qualify for government subsidies. Failure to comply could result in the loss of subsidies amounting to $200 million annually.
-     - **Variable 1**: Domestic suppliers are struggling to meet the increased demand, leading to delays and potential production halts.
-     - **Variable 2**: International suppliers, who are essential for certain specialized components, are threatening to end partnerships due to reduced order volumes.
-     - **Variable 3**: The company's current inventory levels are critically low, risking immediate production stoppages.
-     - **Variable 4**: Regulatory agencies are conducting surprise inspections, increasing the risk of sudden compliance failures and operational disruptions.
+1. **Severe Financial Crisis:**
 
-    #### Conclusion
-
-    GlobalTech's leadership team is facing a convergence of severe challenges that require immediate, strong, and decisive action. Each issue is multifaceted and escalating, demanding an integrated and dynamic approach to navigate these turbulent times. The leadership must demonstrate exceptional strategic acumen, agility, and resilience to steer the company through these crises, ensuring long-term sustainability and growth while maintaining stakeholder trust and operational integrity.
+   - **Declining Revenue:** The company's revenue has dropped by 20% over the last fiscal year, primarily due to intensified competition and a loss of market share across all product lines. This sharp decline has severely impacted the bottom line, resulting in a net loss of $50 million.
    
+   - **High Debt Burden:** Industrial Solutions Inc. is saddled with $400 million in debt. The interest payments on this debt are exerting immense pressure on the company's cash flow, limiting its ability to invest in necessary improvements or respond to market changes effectively.
+   
+   - **Liquidity Issues:** With cash reserves dwindling to $50 million and a current ratio of 0.85, the company is facing significant liquidity risks. The low current ratio indicates that Industrial Solutions Inc. may not be able to meet its short-term financial obligations, raising concerns about potential insolvency.
 
-"""
+2. **Operational Inefficiencies:**
+
+   - **Outdated Manufacturing Processes:** The company's manufacturing processes are outdated, leading to higher production costs, longer lead times, and reduced competitiveness. These inefficiencies are exacerbating the financial strain by increasing operational expenses and reducing profit margins.
+   
+   - **Supply Chain Disruptions:** Frequent disruptions in the supply chain have led to delays in production and delivery, further eroding customer confidence and satisfaction. The lack of a resilient and efficient supply chain is contributing to the operational bottlenecks and inefficiencies.
+
+### Strategic Questions:
+
+1. **Revenue and Market Position:**
+   - What are the underlying reasons for the sharp decline in revenue, and how can the company address these issues to regain market share and stabilize revenue streams?
+
+2. **Debt Management and Liquidity:**
+   - How can Industrial Solutions Inc. manage its substantial debt burden while improving liquidity to ensure it can meet short-term obligations and avoid insolvency?
+
+3. **Operational Overhaul:**
+   - What specific changes are needed in the manufacturing processes to reduce costs and improve efficiency, and how can these changes be implemented without significant disruptions?
+
+4. **Supply Chain Resilience:**
+   - What steps can be taken to build a more resilient supply chain that can withstand disruptions and ensure timely production and delivery?
+
+### Desired Outcomes:
+
+- **Stabilized Revenue:** Achieve revenue stabilization and reverse the declining trend by addressing market share loss and improving sales performance.
+- **Debt Reduction:** Implement strategies to manage and reduce the debt burden, alleviating financial pressure and improving cash flow.
+- **Enhanced Liquidity:** Improve the current ratio to ensure the company can meet its short-term financial obligations and mitigate the risk of insolvency.
+- **Operational Efficiency:** Streamline manufacturing processes to reduce costs, shorten lead times, and enhance overall operational efficiency.
+- **Supply Chain Robustness:** Develop a resilient supply chain that minimizes disruptions and supports consistent production and delivery.
+
+This scenario highlights the urgent need for Industrial Solutions Inc. to address its severe financial crisis and overhaul its operational inefficiencies. The company's survival depends on effectively managing these critical challenges to restore financial stability and operational excellence."""
 
 # Set up logging files
 downloads_folder = os.path.expanduser("~/Downloads")
@@ -180,7 +191,7 @@ def send_message_to_gemini(chat, prompt):
 
 def summarize_conversation(conversation_history):
     prompt = f"""
-Summarize the following business consultation conversation, focusing on the key concepts, questions, and insights. Give more weight to the most recent exchanges. Capture the evolving context of the discussion while highlighting the core business issues. Ensure it's suitable for use in a vector search to find relevant business information. 
+Write a detailed, comprehensive summary of the following business consultation conversation, focusing on the highly specific key concepts regarding the business problem, highly specific business information/metrics, and highly specific questions based on the problem. Do not mention the logic technique strategies like Q* or Monte Carlo as they are irrelevant.  Give more weight to the most recent exchanges. Capture the evolving context of the discussion while highlighting the specific complex business issues. At the end, provide a long list of relevant questions, keywords, and phrases optimized for vector search in my corpus of business textbooks.
 
 Conversation transcript:
 {conversation_history}
@@ -188,27 +199,16 @@ Conversation transcript:
 Summary:
 """
     try:
-        message = anthropic_client.messages.create(
-            model="claude-3-sonnet-20240229",
-            max_tokens=300,
-            temperature=0,
-            messages=[
-                {
-                    "role": "user",
-                    "content": prompt
-                }
-            ]
-        )
-        logging.info(f"Raw Claude API response: {message}")
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        response = model.generate_content(prompt)
         
-        if isinstance(message.content, list):
-            summary = message.content[0].text if message.content else "Error: Empty response from Claude API"
-        elif isinstance(message.content, str):
-            summary = message.content
+        if response.parts:
+            summary = response.text
         else:
-            summary = f"Error: Unexpected response type from Claude API: {type(message.content)}"
-        
-        log_to_file(f"Generated conversation summary: {summary[:100]}...", print_to_console=False)
+            summary = "Error: Empty response from Gemini API"
+
+        # Modified logging statement
+        log_to_file(f"Generated conversation summary: {summary}", print_to_console=False)
         return summary
     except Exception as e:
         error_msg = f"Error in summarize_conversation: {str(e)}"
@@ -224,7 +224,7 @@ def save_final_report(report, filename):
 def process_gemini_prompt(chat, prompt, continuation_prompt, vector_info):
     formatted_prompt = f"""
 {prompt}
-Please utilize the following data to assist in your answer:
+Please utilize the following lessons and concepts from our business textbook database to assist in your answer:
 <database>
 {vector_info}
 </database>
@@ -263,9 +263,10 @@ def main():
         log_to_file(f"Using hardcoded query: {user_input}")
         print(f"Using hardcoded query: {user_input}")
     else:
-        print("Please enter your business scenario or type 'exit' to quit.")
-        user_input = input("User: ")
-        log_to_file(f"User input: {user_input}")
+        # Initialize BusinessInterviewer
+        interviewer = BusinessInterviewer(GOOGLE_API_KEY)
+        user_input = interviewer.conduct_interview()
+        log_to_file(f"User input from interview: {user_input[:200]}...")  # Log first 200 characters
 
     while user_input.lower() != 'exit':
         log_transcript("User", user_input)
@@ -289,34 +290,64 @@ def main():
         summary = summarize_conversation(conversation_history)
 
         # Process with Gemini using PROMPT_2
-        response_2 = process_gemini_prompt(chat, PROMPT_2, "continue with your response", query_pinecone(PROMPT_2, summary))
+        vector_info = query_pinecone(PROMPT_2, summary)
+        response_2 = process_gemini_prompt(chat, PROMPT_2, "continue with your response", vector_info)
         log_to_file(f"Gemini response for PROMPT_2 received", print_to_console=False)
         log_transcript("Assistant", response_2)
         conversation_history += f"Assistant: {response_2}\n\n"
 
+        # Update summary after PROMPT_2
+        summary = summarize_conversation(conversation_history)
+
         # Process with Gemini using PROMPT_3
-        response_3 = process_gemini_prompt(chat, PROMPT_3, "Continue with evaluations", query_pinecone(PROMPT_3, summary))
+        vector_info = query_pinecone(PROMPT_3, summary)
+        response_3 = process_gemini_prompt(chat, PROMPT_3, "Continue with evaluations", vector_info)
         log_to_file(f"Gemini response for PROMPT_3 received", print_to_console=False)
         log_transcript("Assistant", response_3)
         conversation_history += f"Assistant: {response_3}\n\n"
 
+        # Update summary after PROMPT_3
+        summary = summarize_conversation(conversation_history)
+
         # Process with Gemini using PROMPT_4
-        response_4 = process_gemini_prompt(chat, PROMPT_4, "continue with your response", query_pinecone(PROMPT_4, summary))
+        vector_info = query_pinecone(PROMPT_4, summary)
+        response_4 = process_gemini_prompt(chat, PROMPT_4, "continue with your response", vector_info)
         log_to_file(f"Gemini response for PROMPT_4 received", print_to_console=False)
         log_transcript("Assistant", response_4)
         conversation_history += f"Assistant: {response_4}\n\n"
 
+        # Update summary after PROMPT_4
+        summary = summarize_conversation(conversation_history)
+
         # Process with Gemini using PROMPT_5
-        response_5 = process_gemini_prompt(chat, PROMPT_5, "continue with your response", query_pinecone(PROMPT_5, summary))
+        vector_info = query_pinecone(PROMPT_5, summary)
+        response_5 = process_gemini_prompt(chat, PROMPT_5, "continue with your response", vector_info)
         log_to_file(f"Gemini response for PROMPT_5 received", print_to_console=False)
         log_transcript("Assistant", response_5)
         conversation_history += f"Assistant: {response_5}\n\n"
 
-        # Critique and improvement process
-        critique_response = process_gemini_prompt(chat, CRITIQUE_PROMPT, CONTINUE_CRITIQUE_PROMPT, query_pinecone(CRITIQUE_PROMPT, summary))
+        # Update summary after PROMPT_5
+        summary = summarize_conversation(conversation_history)
+
+        # First round of critique
+        vector_info = query_pinecone(CRITIQUE_PROMPT, summary)
+        critique_response = process_gemini_prompt(chat, CRITIQUE_PROMPT, "continue with your response", vector_info)
         log_to_file(f"Gemini response for CRITIQUE_PROMPT received", print_to_console=False)
         log_transcript("Assistant", critique_response)
         conversation_history += f"Assistant: {critique_response}\n\n"
+
+        # Update summary after first critique
+        summary = summarize_conversation(conversation_history)
+
+        # Second round of critique
+        vector_info = query_pinecone(CONTINUE_CRITIQUE_PROMPT, summary)
+        second_critique_response = process_gemini_prompt(chat, CONTINUE_CRITIQUE_PROMPT, "continue with your response", vector_info)
+        log_to_file(f"Gemini response for CONTINUE_CRITIQUE_PROMPT received", print_to_console=False)
+        log_transcript("Assistant", second_critique_response)
+        conversation_history += f"Assistant: {second_critique_response}\n\n"
+
+        # Update summary after second critique
+        summary = summarize_conversation(conversation_history)
 
         # Final report generation
         final_report = process_gemini_prompt(chat, REWRITE_PROMPT, "continue with your response", query_pinecone(REWRITE_PROMPT, summary))
@@ -335,8 +366,25 @@ def main():
         print("Assistant: Analysis complete. Final reports have been saved to your Downloads folder.")
         log_to_file("Analysis complete. Final reports saved.")
 
-        # Update summary for next iteration
-        summary = summarize_conversation(conversation_history)
+        # Convert final reports and transcript to PDF
+        convert_to_pdf(os.path.join(downloads_folder, "Final_Business_Report.md"))
+        convert_to_pdf(os.path.join(downloads_folder, "Final_Implementation_Plan.md"))
+        
+        # Convert conversation transcript to PDF
+        with open(transcript_file, 'r') as f:
+            transcript_content = f.read()
+        
+        # Remove metadata from transcript
+        cleaned_transcript = '\n'.join([line for line in transcript_content.split('\n') if not line.startswith('[')])
+        
+        cleaned_transcript_file = os.path.join(downloads_folder, "Cleaned_Conversation_Transcript.md")
+        with open(cleaned_transcript_file, 'w') as f:
+            f.write(cleaned_transcript)
+        
+        convert_to_pdf(cleaned_transcript_file)
+        
+        print("PDFs have been generated for the final reports and conversation transcript.")
+        log_to_file("PDFs generated for final reports and conversation transcript.")
 
         # Check if there's a hardcoded query (for single-run mode)
         if HARDCODED_QUERY:
