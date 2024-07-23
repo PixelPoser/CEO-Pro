@@ -183,8 +183,8 @@ Please utilize the following lessons and concepts from our business textbook dat
     return full_response
 
 def main():
-    log_to_file("Starting Business Consulting AI Chatbot")
-    print("Welcome to the Business Consulting AI Chatbot!")
+    log_to_file("Starting CEO-PRO")
+    print("Welcome to CEO-PRO!")
     
     conversation_history = ""
     summary = ""
@@ -325,8 +325,8 @@ def main():
             user_input = input("User: ")
             log_to_file(f"User input: {user_input}")
 
-    log_to_file("Business Consulting AI Chatbot session ended")
-    print("Thank you for using the Business Consulting AI Chatbot!")
+    log_to_file("CEO-Pro session ended")
+    print("Thank you for using CEO-Pro!")
 
 if __name__ == "__main__":
     main()
