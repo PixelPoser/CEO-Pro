@@ -1,6 +1,5 @@
 import os
 import google.generativeai as genai
-import anthropic
 from pinecone import Pinecone
 import logging
 from prompts import *
