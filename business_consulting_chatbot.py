@@ -30,75 +30,7 @@ NAMESPACE = "pinecone"
 index = pc.Index(INDEX_NAME)
 
 # Hardcoded query option (set to None if you want to use user input)
-HARDCODED_QUERY = """ ### Business Scenario: Financial Crisis and Operational Overhaul for Industrial Solutions Inc.
-
-**Company Overview:**
-
-**Name:** Industrial Solutions Inc.  
-**Industry:** Manufacturing  
-**Location:** Midwest, USA  
-**Founded:** 1985  
-**Revenue:** $1.2 billion annually  
-**Employees:** 4,500  
-**Product Lines:** Heavy machinery for construction, agricultural equipment, and industrial tools  
-**Market Share:** 10% in heavy machinery, 8% in agricultural equipment, 5% in industrial tools  
-**Competitors:** Global Manufacturing Corp, Tech Tools Ltd., Agritech Solutions  
-
-**Financial Situation:**
-
-**Revenue:** $1.2 billion (down from $1.5 billion in the previous fiscal year)  
-**Net Income:** -$50 million (loss)  
-**Operating Margin:** -4.2%  
-**Debt:** $400 million  
-**Cash Reserves:** $50 million  
-**Current Ratio:** 0.85 (indicating liquidity issues)  
-**Stock Price:** $18 per share (down from $30 per share a year ago)
-
-### Scenario: Severe Financial Crisis and Operational Inefficiencies
-
-**Problem Statement:**
-
-Industrial Solutions Inc. is at a critical juncture, facing two primary challenges that threaten its survival: a severe financial crisis and significant operational inefficiencies.
-
-### Core Issues:
-
-1. **Severe Financial Crisis:**
-
-   - **Declining Revenue:** The company's revenue has dropped by 20% over the last fiscal year, primarily due to intensified competition and a loss of market share across all product lines. This sharp decline has severely impacted the bottom line, resulting in a net loss of $50 million.
-   
-   - **High Debt Burden:** Industrial Solutions Inc. is saddled with $400 million in debt. The interest payments on this debt are exerting immense pressure on the company's cash flow, limiting its ability to invest in necessary improvements or respond to market changes effectively.
-   
-   - **Liquidity Issues:** With cash reserves dwindling to $50 million and a current ratio of 0.85, the company is facing significant liquidity risks. The low current ratio indicates that Industrial Solutions Inc. may not be able to meet its short-term financial obligations, raising concerns about potential insolvency.
-
-2. **Operational Inefficiencies:**
-
-   - **Outdated Manufacturing Processes:** The company's manufacturing processes are outdated, leading to higher production costs, longer lead times, and reduced competitiveness. These inefficiencies are exacerbating the financial strain by increasing operational expenses and reducing profit margins.
-   
-   - **Supply Chain Disruptions:** Frequent disruptions in the supply chain have led to delays in production and delivery, further eroding customer confidence and satisfaction. The lack of a resilient and efficient supply chain is contributing to the operational bottlenecks and inefficiencies.
-
-### Strategic Questions:
-
-1. **Revenue and Market Position:**
-   - What are the underlying reasons for the sharp decline in revenue, and how can the company address these issues to regain market share and stabilize revenue streams?
-
-2. **Debt Management and Liquidity:**
-   - How can Industrial Solutions Inc. manage its substantial debt burden while improving liquidity to ensure it can meet short-term obligations and avoid insolvency?
-
-3. **Operational Overhaul:**
-   - What specific changes are needed in the manufacturing processes to reduce costs and improve efficiency, and how can these changes be implemented without significant disruptions?
-
-4. **Supply Chain Resilience:**
-   - What steps can be taken to build a more resilient supply chain that can withstand disruptions and ensure timely production and delivery?
-
-### Desired Outcomes:
-
-- **Stabilized Revenue:** Achieve revenue stabilization and reverse the declining trend by addressing market share loss and improving sales performance.
-- **Debt Reduction:** Implement strategies to manage and reduce the debt burden, alleviating financial pressure and improving cash flow.
-- **Enhanced Liquidity:** Improve the current ratio to ensure the company can meet its short-term financial obligations and mitigate the risk of insolvency.
-- **Operational Efficiency:** Streamline manufacturing processes to reduce costs, shorten lead times, and enhance overall operational efficiency.
-- **Supply Chain Robustness:** Develop a resilient supply chain that minimizes disruptions and supports consistent production and delivery.
-
-This scenario highlights the urgent need for Industrial Solutions Inc. to address its severe financial crisis and overhaul its operational inefficiencies. The company's survival depends on effectively managing these critical challenges to restore financial stability and operational excellence."""
+HARDCODED_QUERY = None
 
 # Set up logging files
 downloads_folder = os.path.expanduser("~/Downloads")
