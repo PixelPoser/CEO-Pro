@@ -194,33 +194,23 @@ $$V(s) \approx \mathbb{E}_\pi[R(s, a) + \gamma V(s')]$$
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/business-strategy-optimizer.git
-cd business-strategy-optimizer
+git clone https://github.com/pixelposer/ceo-pro
+cd ceo-pro
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your API keys
+# Insert API Key in app.py
 ```
 
 ## 🖥 Usage
 
-1. Open `business_consulting_chatbot.py`
-2. Input your required API keys
+1. Input your required API keys
   - OpenAI
   - Google Gemini
-3. Modify the `HARDCODED_QUERY` variable:
-   ```python
-   HARDCODED_QUERY = """
-   [Your detailed business scenario here]
-   """
-   ```
-3. Run the script:
-   ```bash
-   python business_consulting_chatbot.py
-   ```
+  - Pinecone
+2. Open `app.py`
+3. Enter business prompt
 
 ## 🏗 System Architecture
 
@@ -233,10 +223,11 @@ cp .env.example .env
 
 ## 📊 Output
 
-The system generates two key documents:
+The system generates three key documents:
 
-1. **Comprehensive Business Plan** (`Final_Business_Report.md`)
-2. **Detailed Implementation Plan** (`Final_Implementation_Plan.md`)
+1. **Final Business Plan** (`Final_Business_Report.pdf`)
+2. **Final Implementation Plan** (`Final_Implementation_Plan.pdf`)
+3. **Conversation Transcript** (`Conversation_Transcript.pdf`)
 
 
 ## 🤝 Contributing
